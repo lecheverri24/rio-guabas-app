@@ -1,5 +1,26 @@
-<x-layouts.app.sidebar :title="$title ?? null">
-    <flux:main>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<head>
+    @include('partials.head')
+</head>
+<body class="min-h-screen flex flex-col bg-neutral-100 antialiased dark:bg-linear-to-b dark:from-neutral-950 dark:to-neutral-900">
+
+    {{-- Navbar siempre arriba --}}
+    <header class="w-full">
+        <x-app-menu-bar />
+    </header>
+
+    {{-- Contenido principal, crece para ocupar espacio entre header y footer --}}
+    <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {{ $slot }}
-    </flux:main>
-</x-layouts.app.sidebar>
+    </main>
+
+    {{-- Footer siempre al final --}}
+    <footer class="w-full bg-neutral-900 text-white py-4 text-center">
+        © {{ date('Y') }} - Todos los derechos reservados
+    </footer>
+
+    @fluxScripts
+</body>
+</html>
+
