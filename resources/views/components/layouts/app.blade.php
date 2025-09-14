@@ -6,9 +6,7 @@
 <body class="min-h-screen flex flex-col bg-neutral-100 antialiased dark:bg-linear-to-b dark:from-neutral-950 dark:to-neutral-900">
 
     {{-- Navbar siempre arriba --}}
-    <header class="w-full">
-        <x-app-menu-bar />
-    </header>
+    <x-app-menu-bar />
 
     {{-- Contenido principal, crece para ocupar espacio entre header y footer --}}
     <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -16,9 +14,7 @@
     </main>
 
     {{-- Footer siempre al final --}}
-    <footer class="w-full bg-neutral-900 text-white py-4 text-center">
-        © {{ date('Y') }} - Todos los derechos reservados
-    </footer>
+    <x-app-footer />
 
     @fluxScripts
 </body>
