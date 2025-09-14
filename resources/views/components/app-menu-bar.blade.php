@@ -5,8 +5,8 @@
                 
                 <!-- Logo -->
                 <div class="flex-shrink-0">
-                    <a href="{{ route('home.index') }}" class="text-xl font-bold hover:text-emerald-300 transition-colors">
-                        Rio Guabas sostenible
+                    <a href="{{ route('home') }}" class="text-xl font-bold hover:text-emerald-300 transition-colors">
+                        Rio Guabas Sostenible
                     </a>
                 </div>
 
